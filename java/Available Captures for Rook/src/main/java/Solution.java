@@ -2,7 +2,6 @@ class Solution {
     private static final char P = 'p';
     private static final char R = 'R';
     private static final char B = 'B';
-    private static final char S = '.';
     
     public int numRookCaptures(char[][] board) {
         
@@ -13,37 +12,37 @@ class Solution {
         int sum = 0;
         
         for (int i = x+1; i < 8; i++) {
-            if (board[i][y] == this.P) {
+            if (board[i][y] == P) {
                 sum++;
                 i = 8;
-            } else if (board[i][y] == this.B) {
+            } else if (board[i][y] == B) {
                 i = 8;
             }
         }
         
         for (int i = x-1; i >= 0; i--) {
-            if (board[i][y] == this.P) {
+            if (board[i][y] == P) {
                 sum++;
                 i = -1;
-            } else if (board[i][y] == this.B) {
+            } else if (board[i][y] ==B) {
                 i = -1;
             }
         }
         
         for (int j = y+1; j < 8; j++) {
-            if (board[x][j] == this.P) {
+            if (board[x][j] == P) {
                 sum++;
                 j = 8;
-            } else if (board[x][j] == this.B) {
+            } else if (board[x][j] == B) {
                 j = 8;
             }
         }
         
         for (int j = y-1; j >= 0; j--) {
-            if (board[x][j] == this.P) {
+            if (board[x][j] == P) {
                 sum++;
                 j = -1;
-            } else if (board[x][j] == this.B) {
+            } else if (board[x][j] == B) {
                 j = -1;
             }
         }
@@ -56,7 +55,7 @@ class Solution {
         
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if (board[i][j] == this.R) {
+                if (board[i][j] == R) {
                     pos[0] = i;
                     pos[1] = j;
                     return pos;
